@@ -23,7 +23,7 @@ public class Circle : GeometricFigure
 	public override double GetPerimeter() =>  2 * Math.PI * R;	
 	private double ValidateR(double r)
 	{
-		if (r < 0)
+		if (r <= 0)
 		{
 			throw new ArgumentOutOfRangeException(nameof(r), $"The radius: {r} is invalid.");
 		}

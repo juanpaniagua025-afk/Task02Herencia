@@ -1,11 +1,11 @@
 ﻿namespace Backend;
 
-public class Rectangle : Square
+public class Kite : Rhombus
 {
 	 
 	private double _b;
 
-	public Rectangle(string name, double a, double b) : base(name, a)
+	public Kite(string name, double a, double d1, double d2, double b) : base(name, a, d1, d2)
 	{
 		B = b;
 	}
@@ -17,7 +17,7 @@ public class Rectangle : Square
 		set => _b = ValidateB(value);
 	}
 
-	public override double GetArea() => A * B;
+	public override double GetArea() => base.GetArea();
 
 	public override double GetPerimeter() => 2 * (A + B);
 	private double ValidateB(double b)

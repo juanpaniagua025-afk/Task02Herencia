@@ -2,7 +2,7 @@
 
 	public class Square : GeometricFigure
     {
-	// Fields 
+	 
 	private double _a;
 
 	public Square(string name, double a)
@@ -11,7 +11,6 @@
 		Name = name;
 	}
 
-	// Propeties
 	public double A
 	{
 		get => _a;
@@ -23,7 +22,7 @@
 	public override double GetPerimeter() => 4 * A;
 	private double ValidateA(double a)
 	{
-		if (a < 0)
+		if (a <= 0)
 		{
 			throw new ArgumentOutOfRangeException(nameof(a), $"The side : {a} is invalid.");
 		}

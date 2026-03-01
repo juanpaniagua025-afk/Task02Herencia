@@ -2,7 +2,7 @@
 
 public class Triangle : Rectangle
 {
-	// Fields 
+	
 	private double _c;
 	private double _h;
 
@@ -12,7 +12,6 @@ public class Triangle : Rectangle
 		H = h;
 	}
 
-	// Propeties
 	public double C
 	{
 		get => _c;
@@ -29,19 +28,19 @@ public class Triangle : Rectangle
 	public override double GetPerimeter() => A + B + C;
 	private double ValidateC(double c)
 	{
-		if (C < 0)
+		if (c <= 0)
 		{
 			throw new ArgumentOutOfRangeException(nameof(c), $"The length : {c} is invalid.");
 		}
-		return C;
+		return c;
 	}
 	private double ValidateH(double h)
 	{
-		if (H < 0)
+		if (h <=0)
 		{
 			throw new ArgumentOutOfRangeException(nameof(h), $"The heigth : {h} is invalid.");
         }
-		return C;
+		return h;
 	}
 
 }
